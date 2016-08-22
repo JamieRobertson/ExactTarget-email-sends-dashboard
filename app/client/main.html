@@ -1,0 +1,53 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ExactTarget Send Dashboard</title>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,500' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <header class="main-header">
+          <h2>ExactTarget Send Dashboard</h2>
+        </header>
+        <ul class="list-inline">
+          <li><a href="#" class="btn">Open rate</a></li>
+          <li><a href="#" class="btn">Click through rate</a></li>
+          <li><a href="#" class="btn">Unsubscribe rate</a></li>
+        </ul>
+
+        {{> graph}}
+
+        <input type="date" />
+        <br /><br />
+        
+        {{!-- {{> emailsInfo}} --}}
+
+        {{> hello}}
+        
+      </div>
+    </div>
+  </div>
+
+</body>
+
+<template name="graph">
+  <div></div>
+</template>
+
+<template name="hello">
+  <button>Click Me</button>
+  <p>You've pressed the button {{counter}} times.</p>
+</template>
+
+<!-- <template name="info">
+  <h2>Learn Meteor!</h2>
+  <ul>
+    <li><a href="https://www.meteor.com/try">Do the Tutorial</a></li>
+    <li><a href="http://guide.meteor.com">Follow the Guide</a></li>
+    <li><a href="https://docs.meteor.com">Read the Docs</a></li>
+    <li><a href="https://forums.meteor.com">Discussions</a></li>
+  </ul>
+</template> -->

@@ -1,2 +1,14 @@
-.meteor/local
-.meteor/meteorite
+.DS_Store
+
+# meteor
+app/.meteor/local
+app/.meteor/meteorite
+
+# node
+app/node_modules
+
+# hide my ExactTarget API credentials
+app/server/credentials.js
+
+# my directory for database dumps
+app/db_dump

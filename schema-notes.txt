@@ -1,0 +1,38 @@
+{
+	// Fetched from 'Send' object. Send object has no NumberDelivered value
+	ClientID: Number,
+	SendID: Number,
+	EmailID: Number,
+	FromName: String,
+	Duplicates: Number,
+	InvalidAddresses: Number,
+	ExistingUndeliverables: Number,
+	ExistingUnsubscribes: Number,
+	HardBounces: Number,
+	SoftBounces: Number,
+	OtherBounces: Number,
+	UniqueClicks: Number,
+	UniqueOpens: Number,
+	NumberSent: Number,
+	Unsubscribes: Number,
+	MissingAddresses: Number,
+	Subject: String,  // This can be '%%= Subject =%%'
+	PreviewURL: String,  // PreviewURL and has ampscript
+	SentDate: Date,  // How is this different from 'SendDate'? + this time will say it is UTC but it is actually inAmerican Central Time (CTZ)
+	EmailName: String,
+	Status: String, 
+
+	// Calculated ourselves:
+	NumberDelivered: Number,  // NumberSent - (HardBounces + SoftBounces + OtherBounces)
+	DeliverabilityRate: Number,  // percentageOf(r.NumberDelivered, r.NumberSent)
+	OpenRate: Number,  // percentageOf(r.UniqueOpens, r.NumberDelivered)
+	ClickThroughRate: Number,   // percentageOf(r.UniqueClicks, r.NumberDelivered)
+	UnsubscribeRate: Number,  // percentageOf(r.Unsubscribes, r.NumberDelivered)
+
+	// Fetched from undocumented preview endpoint, fetched using EmailID:
+	PreviewHTML: String
+
+	// Must find a way of finding which DataExtension they were sent to
+	// eg. if FromName == 'Take Update' = Take
+	SentTo: [String]  // eg. ['Take', 'Reason8']
+}

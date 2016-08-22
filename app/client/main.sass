@@ -1,0 +1,49 @@
+@import '{}/client/sass/_normalize.scss'
+@import '{}/client/sass/bootstrap-4.0.0-alpha/_bootstrap-grid.scss'
+
+html 
+	box-sizing: border-box
+
+*,
+*:before,
+*:after 
+	box-sizing: inherit
+
+body 
+	font-family: 'Roboto', sans-serif
+	font-weight: normal
+	font-weight: 400
+	color: #3a3a3a
+
+h2, h3, h4, h5, h6 
+	font-weight: normal
+	font-weight: 400
+
+h1
+	font-weight: bold
+	font-weight: 500
+
+p a, a
+	color: #39c
+	text-decoration: none
+	&:hover
+		text-decoration: underline
+
+ul.list-inline
+	padding-left: 0
+	margin: 0.5em 0 1.5em
+	> li 
+		display: inline-block
+		list-style: none
+
+a.btn 
+	display: inline-block
+	padding: 10px 20px
+	margin: 5px 5px 5px 0
+	border: 1px solid #39c
+	cursor: pointer
+	font-size: 85%
+	&:hover
+		text-decoration: none
+		color: darken(#39c, 20%)
+		border-color: darken(#39c, 20%)
